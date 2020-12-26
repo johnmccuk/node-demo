@@ -1,0 +1,15 @@
+{
+  "name": "node-graphql-sample",
+  "version": "1.0.0",
+  "description": "A quick mess around to find best practices/gotchas setting up a grphql server in nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-dev app.js"
+  },
+  "author": "john mccracken",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
