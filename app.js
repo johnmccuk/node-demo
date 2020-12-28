@@ -1,15 +1,18 @@
-const http = require('http')
-const routes = require('./routes.js')
+const express = require('express')
+const app = express()
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
 
-const hostname = process.env.HOST || '127.0.0.1'
+//const hostname = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT
 
-const server = http.createServer(routes.defaultRoute)
+/* Routes */
+app.use('/admin/', require('./routes/admin'));
+app.use(require('./routes/default'));
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`)
+
+app.listen(port, () => {
+    console.log('Express started on port ' + port)
 })
