@@ -1,10 +1,8 @@
 var express = require('express');
+var routes = express.Router();
 
-var defaultRoutes = express.Router();
-
-defaultRoutes.get('/', function (req, res) {
+routes.get('/', function (req, res) {
     res.send('Base route!!');
 });
 
-
-module.exports = defaultRoutes;
+module.exports = routes;

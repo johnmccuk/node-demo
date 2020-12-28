@@ -1,10 +1,8 @@
 var express = require('express');
+var routes = express.Router();
 
-var adminRoutes = express.Router();
-
-adminRoutes.get('/', function (req, res) {
+routes.get('/', function (req, res) {
     res.send('Admin route!!');
 });
 
-
-module.exports = adminRoutes;
+module.exports = routes;
